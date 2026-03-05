@@ -1,7 +1,7 @@
 import json
 import boto3
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('serverless-web-application-on-aws')
+table = dynamodb.Table('serverless-web-app')
 def lambda_handler(event, context):
     response = table.get_item(Key={
         'id':'0'
